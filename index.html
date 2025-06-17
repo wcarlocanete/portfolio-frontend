@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>John Carlo P. Cañete | Portfolio</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <video autoplay muted loop playsinline id="bg-video">
+  <source src="https://cdn.coverr.co/videos/coverr-dark-tech-noise-6829/1080p.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+  </video>
+  <div class="overlay"></div>
+
+  <!-- Overlay Background -->
+  <div class="overlay"></div>
+
+  <!-- Profile Section -->
+  <div id="profile" class="content-section active">
+    <img src="resumepic.png" alt="Profile Picture" class="profile-pic" />
+    <h1>Hello, I'm John Carlo P. Cañete</h1>
+    <p>A passionate developer and tech enthusiast.</p>
+  </div>
+
+  <!-- Projects Section -->
+  <div id="projects" class="content-section">
+    <h2>Projects</h2>
+    <ul>
+      <li><a href="#">Portfolio Website</a></li>
+      <li><a href="#">Arduino Wood Conveyor</a></li>
+      <li><a href="#">IT Asset Tracker</a></li>
+    </ul>
+  </div>
+
+  <!-- Contact Section -->
+  <div id="contact" class="content-section">
+    <h2>Contact Me</h2>
+    <form action="http://localhost:3000/contact" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <!-- Circular Floating Navigation -->
+<!-- Text-Based Circular Floating Navigation -->
+<div class="circle-nav">
+  <button onclick="showSection('profile')" title="Profile">Profile</button>
+  <button onclick="showSection('projects')" title="Projects">Projects</button>
+  <button onclick="showSection('contact')" title="Contact">Contact</button>
+</div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
