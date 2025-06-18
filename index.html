@@ -11,51 +11,63 @@
 
 <body>
   <video autoplay muted loop playsinline id="bg-video">
-  <source src="https://cdn.coverr.co/videos/coverr-dark-tech-noise-6829/1080p.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
+    <source src="videos/dark-tech2.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
   </video>
   <div class="overlay"></div>
-
-  <!-- Overlay Background -->
-  <div class="overlay"></div>
+  
 
   <!-- Profile Section -->
   <div id="profile" class="content-section active">
-    <img src="resumepic.png" alt="Profile Picture" class="profile-pic" />
-    <h1>Hello, I'm John Carlo P. Cañete</h1>
-    <p>A passionate developer and tech enthusiast.</p>
+    <div class="profile-top">
+      <img src="resumepic.png" alt="Profile Picture" class="profile-pic" />
+      <div class="profile-text">
+        <h1>Hello, I'm John Carlo P. Cañete</h1>
+        <p>A passionate developer and tech enthusiast.</p>
+      </div>
+    </div>
+    <div class="profile-links">
+      <a href="Canete_Resume.pdf" target="_blank" class="resume-btn">Resume</a>
+      <a href="https://www.linkedin.com/in/your-username" target="_blank" class="linkedin-btn">LinkedIn</a>
+    </div>
   </div>
 
   <!-- Projects Section -->
   <div id="projects" class="content-section">
     <h2>Projects</h2>
-    <ul>
-      <li><a href="#">Portfolio Website</a></li>
-      <li><a href="#">Arduino Wood Conveyor</a></li>
-      <li><a href="#">IT Asset Tracker</a></li>
-    </ul>
+    <div class="projects-container">
+      <div class="project-card" title="A personal portfolio with animated sections and background video">
+        <h3>Portfolio Website</h3>
+        <p>Modern responsive site to showcase skills and resume.</p>
+      </div>
+      <div class="project-card" title="Uses Arduino + IR sensors to detect and move wood items">
+        <h3>Arduino Wood Conveyor</h3>
+        <p>Automated system for wood sorting using IR sensors and servo motors.</p>
+      </div>
+      <div class="project-card" title="Tracks IT assets with condition status and location">
+        <h3>IT Asset Tracker</h3>
+        <p>Inventory tool to manage computers and peripherals.</p>
+      </div>
+    </div>
   </div>
 
   <!-- Contact Section -->
   <div id="contact" class="content-section">
     <h2>Contact Me</h2>
-    <form action="https://portfolio-backend-8d3r.onrender.com/contact" method="POST">
+    <form action="http://localhost:3000/contact" method="POST">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
       <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
       <button type="submit">Send Message</button>
     </form>
-
   </div>
 
-  <!-- Circular Floating Navigation -->
-<!-- Text-Based Circular Floating Navigation -->
-<div class="circle-nav">
-  <button onclick="showSection('profile')" title="Profile">Profile</button>
-  <button onclick="showSection('projects')" title="Projects">Projects</button>
-  <button onclick="showSection('contact')" title="Contact">Contact</button>
-</div>
-
+  <!-- Navigation Bar -->
+  <nav class="top-nav">
+    <button onclick="showSection('profile')">Profile</button>
+    <button onclick="showSection('projects')">Projects</button>
+    <button onclick="showSection('contact')">Contact</button>
+  </nav>
 
   <script src="script.js"></script>
 </body>
